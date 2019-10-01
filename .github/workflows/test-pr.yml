@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest    
     steps:
       - name: Stop action on special branch name
-        if: !(startsWith(github.head_ref, 'stop-action-'))
+        if: ! (startsWith(github.head_ref, 'stop-action-'))
         run: exit 0
       - name: Dump GitHub context
         env:
