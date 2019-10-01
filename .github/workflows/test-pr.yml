@@ -2,10 +2,10 @@ name: A workflow for PRs
 on: 
   pull_request:
     branches:
-    -master
+    - master
 jobs:
   build:
-    name: Hello world action
+    name: echo info
     runs-on: ubuntu-latest    
     steps:
       - name: Stop action on special branch name
