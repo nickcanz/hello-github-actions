@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest    
     steps:
       - name: Stop action on special branch name
-        if: !startsWith("${{github.head_ref}}", "bypass-action-")
+        if: ! startsWith(github.head_ref, 'run-action-')
         run: echo "head ref is ${{github.head_ref}}"
       - name: Dump GitHub context
         env:
