@@ -3,14 +3,12 @@ on:
   pull_request:
     branches:
     - master
+    - '!stop-action-*'
 jobs:
   build:
     name: echo info
     runs-on: ubuntu-latest 
     steps:
-      - name: Stop action on special branch name
-        if: !startsWith(github.head_ref, 'stop-action-')
-        run: exit 1
       - name: Dump GitHub context
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
