@@ -2,8 +2,8 @@ name: A workflow for PRs
 on: 
   pull_request:
     branches:
-    - master
-    - '!stop-action-*'
+    - 'master'
+    - '!stop-action-'
 jobs:
   build:
     name: echo info
